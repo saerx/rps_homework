@@ -18,4 +18,15 @@ class Game():
         elif competing_hands[1] == "rock" and competing_hands[0] == "paper":
             winning_player = self.first_player
 
+        elif competing_hands[0] == "scissors" and competing_hands[1] == "rock":
+            winning_player = self.second_player
+        elif competing_hands[1] == "scissors" and competing_hands[0] == "rock":
+            winning_player = self.first_player
+
+        # elif competing_hands[0] == "rock" and competing_hands[1] == "paper":
+        #     winning_player = self.second_player
+        # elif competing_hands[1] == "rock" and competing_hands[0] == "paper":
+        #     winning_player = self.first_player
+        
+
         return winning_player

@@ -36,3 +36,9 @@ class TestGame(unittest.TestCase):
         winning_player_2 = self.game2.find_winner()
         self.assertEqual(winning_player_1, self.player_2)
         self.assertEqual(winning_player_2, self.player_2)
+
+    def test_find_winner_for_rock_and_scissors(self):
+        winning_player_1 = self.game3.find_winner()
+        winning_player_2 = self.game4.find_winner()
+        self.assertEqual(winning_player_1, self.player_1)
+        self.assertEqual(winning_player_2, self.player_1)
