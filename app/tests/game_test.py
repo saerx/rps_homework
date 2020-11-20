@@ -19,7 +19,9 @@ class TestGame(unittest.TestCase):
         self.game4 = Game(self.player_3, self.player_1)
         self.game5 = Game(self.player_2, self.player_3)
         self.game6 = Game(self.player_3, self.player_2)
-        self.game7 = Game(self.player_3, self.player_6)
+        self.game7 = Game(self.player_1, self.player_4)
+        self.game8 = Game(self.player_2, self.player_5)
+        self.game9 = Game(self.player_3, self.player_6)
 
     def test_game_has_player1(self):
         self.assertEqual(self.game1.first_player, self.player_1)
@@ -48,3 +50,11 @@ class TestGame(unittest.TestCase):
         winning_player_2 = self.game6.find_winner()
         self.assertEqual(winning_player_1, self.player_3)
         self.assertEqual(winning_player_2, self.player_3)
+
+    def test_find_winner_returns_draw(self):
+        winning_player_1 = self.game7.find_winner()
+        winning_player_2 = self.game8.find_winner()
+        winning_player_3 = self.game9.find_winner()
+        self.assertIsNone(winning_player_1)
+        self.assertIsNone(winning_player_2)
+        self.assertIsNone(winning_player_3)
