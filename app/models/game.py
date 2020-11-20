@@ -27,4 +27,5 @@ class Game():
             winning_player = self.second_player
         elif competing_hands[1] == "paper" and competing_hands[0] == "scissors":
             winning_player = self.first_player
+            
         return winning_player
