@@ -10,6 +10,12 @@ class Game():
         competing_hands.append(self.second_player.hand)
         return competing_hands
 
-    # def winning_game(self):
-    #     winning_player = None
-    #     competing_hands = []
+    def find_winner(self):
+        competing_hands = self.enter_the_ring()
+        winning_player = None
+        if competing_hands[0] == "rock" and competing_hands[1] == "paper":
+            winning_player = self.second_player
+        elif competing_hands[1] == "rock" and competing_hands[0] == "paper":
+            winning_player = self.first_player
+
+        return winning_player

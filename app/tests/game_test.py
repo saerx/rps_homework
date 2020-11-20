@@ -19,3 +19,7 @@ class TestGame(unittest.TestCase):
     def test_enter_the_ring_method_returns_a_list_with_both_hands(self):
         competing_hands  = self.game1.enter_the_ring()
         self.assertEqual(competing_hands, ["rock", "paper"])
+
+    def test_find_winner_for_rock_and_paper(self):
+        winning_player = self.game1.find_winner()
+        self.assertEqual(winning_player, self.player_2)
