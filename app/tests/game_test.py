@@ -15,3 +15,7 @@ class TestGame(unittest.TestCase):
 
     def test_game_has_player2(self):
         self.assertEqual(self.game1.second_player, self.player_2)
+
+    def test_enter_the_ring_method_returns_a_list_with_both_hands(self):
+        competing_hands  = self.game1.enter_the_ring()
+        self.assertEqual(competing_hands, ["rock", "paper"])
