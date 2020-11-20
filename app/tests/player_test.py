@@ -10,3 +10,6 @@ class TestPlayer(unittest.TestCase):
     def test_player_has_name(self):
         self.assertEqual("Greg", self.player_1.name)
 
+    def test_player_has_hand(self):
+        self.assertEqual("rock", self.player_1.hand)
+
