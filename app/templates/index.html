@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Rock Paper Scissors !</h1>
+
+    <form action="/play_rps" method="post">
+        <label for="player_1_hand">Player One's Hand</label>
+        <input type="text" name="player_1_hand" id="player_1_hand">
+    
+        <label for="player_2_hand">Players Two's Hand</label>
+        <input type="text" name="player_2_hand" id="player_2_hand">
+       
+    
+        <input type="submit" value="Play!">
+    </form>
+
+
+
+{% endblock content %}
+
+
