@@ -1,6 +1,6 @@
 import unittest
-from app.models.game import Game 
-from app.models.player import Player
+from app.models.game import * 
+from app.models.player import *
 
 
 class TestGame(unittest.TestCase):
